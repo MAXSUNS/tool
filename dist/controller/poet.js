@@ -44,7 +44,7 @@ async function info(ctx) {
                         var words = fileName.split(".");
                         if (words[0] == 'poet' && words[1] == 'song' && words[2] > 60000) {
                             async.mapSeries(JSON.parse(bytesRead), function (aut, callback) {
-                                var path = 'http://119.23.64.113:9200/' + words[0] + '/' + words[1] + '/';
+                                var path = 'http://0.0.0.0:9200/' + words[0] + '/' + words[1] + '/';
                                 if (aut.paragraphs[0]) {
                                     path = path + cryptPwd(aut.paragraphs[0]);
                                 } else {
